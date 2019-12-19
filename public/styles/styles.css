@@ -15,8 +15,8 @@
 }
 
 .header {
-  background-color: #190061;
-  border: 15px solid #0c0032;
+  background-color: white;
+  border: 15px solid white;
   width: 100%;
 }
 
@@ -26,6 +26,7 @@
 
 body {
   background: url(../images/option-1.png) no-repeat center center fixed;
+  /* background-color: white; */
   text-align: center;
   color: aliceblue;
 }
