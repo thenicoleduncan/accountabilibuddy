@@ -1,0 +1,98 @@
+{{!-- tasks page showing tasks associated with the right goal --}}
+
+<div class="header">
+  <a href="dashboard.handlebars">
+    <img id="logo" src="/images/logo.png" alt="logo">
+  </a>
+  <h1>ACCOUNTABILIBUDDY</h1>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/completed-goals">Completed Goals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api/logout">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="add-goal col-lg-12">
+      <p class="tgoal"><b>Goal: </b>{{ goaldescr }}</p>
+
+      <p class="leading">Add a Task</p>
+      <form action="/api/:{{ idgoal }}/tasks" method="POST">
+        <textarea type="text" name="description" id="textInput" class="textInput"></textarea>
+        <br><br>
+        <button type="submit" class="signBtn">Add Task!</button>
+        <br><br>
+      </form>
+    </div>
+
+  </div>
+  <br>
+  <div class="row">
+
+    <div id="currentTasks" class="myProgress col-lg-12">
+      <br>
+      <p class="leading">Current Tasks</p>
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          {{#each tasksCurrent }}
+          <p id="myBar" class="goalTime col-lg-12">{{description}}
+            <button type="submit" data-taskid="{{ id }}" class="signBtn1 col-lg-1 p-0 mr-1 ml-1 taskdone">✅</button>
+            <button type="submit" data-taskid="{{ id }}"
+              class="signBtn1 col-lg-1 p-0 mr-1 ml-1 taskpriority">&excl;</button>
+            <button type="submit" data-taskid="{{ id }}" class="signBtn1 col-lg-1 p-0 mr-1 ml-1 taskdelete">❌</button>
+          </p>
+
+          {{/each}}
+        </div>
+
+        
+        
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div id="finishedTasks" class="myProgress col-lg-12">
+      <br>
+      <p class="leading">Finished Tasks</p>
+      {{#each tasksDone }}
+      <p id="tasking" class="goalTime">{{description}}</p>
+      {{/each}}
+    </div>
+  </div>
+
+</div>
+<br><br><br><br>
+<div class="footer">
+  <p>© Copyright 2019</p>
+</div>

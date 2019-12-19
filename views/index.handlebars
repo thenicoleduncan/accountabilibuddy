@@ -1,0 +1,45 @@
+{{!-- sign in page (already have an account) ... can take you to create account page--}}
+<div class="header">
+    <a href="dashboard">
+        <img id="logo" src="/images/logo.png" alt="logo">
+    </a>
+    <h1><a href="dashboard">ACCOUNTABILIBUDDY</a></h1>
+</div>
+
+<div class="container">
+    <br>
+    <div class="row">
+        <div>
+            <h2>Welcome to Accountabilibuddy. A safe place to store your hopes and dreams.</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="sign-in col-lg-4">
+            <br>
+            
+            <p>Sign in to your account.</p>
+
+            <form action="api/login" method="POST">
+
+                Email:<br>
+                <input type="text" name="email" value="">
+                <br><br>
+                Password:<br>
+                <input type="password" name="password" value="">
+                <br><br>
+                <input type="submit" class="signBtn" value="Sign In">
+            </form>
+            <br>
+            <p>Don't have an account? <a href="/add" class="text-light">Sign up.</a></p>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <br> <br>
+
+
+</div>
+    <div class="footer">
+        <p>© Copyright 2019</p>
+    </div>

@@ -1,0 +1,48 @@
+{{!--create an account page --}}
+<div class="header">
+    <a href="dashboard.handlebars">
+        <img id="logo" src="/images/logo.png" alt="logo">
+    </a>
+    <h1>ACCOUNTABILIBUDDY</h1>
+</div>
+
+<div class="conatiner">
+    <br><br>
+
+    <div class="row">
+
+        <div class="col-lg-4"></div>
+
+        <div class="sign-in col-lg-4">
+
+            <br>
+
+            <p>Sign up to create an account.</p>
+
+            <form action="/api/user" method="POST">
+                Name:<br>
+                <input type="text" name="name" value="">
+                <br><br>
+                Email:<br>
+                <input type="text" name="email" value="">
+                <br><br>
+                Password:<br>
+                <input type="password" name="password" value="">
+                <br><br>
+                <input type="submit" class="signBtn" value="Sign up!">
+            </form>
+
+            <br>
+
+        </div>
+
+        <div class="col-lg-4"></div>
+
+    </div>
+
+    <br><br>
+
+    <div class="footer">
+        <p>©Copyright 2019</p>
+    </div>
+</div>
