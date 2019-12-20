@@ -15,36 +15,76 @@
 }
 
 .header {
+  /* border-style: dotted solid double dashed #ff7f50; */
   background-color: white;
-  border: 15px solid white;
+  /* border-bottom: 3px double #ff7f50; */
   width: 100%;
 }
 
 #logo {
-  width: 50px;
+  width: 300px;
+}
+
+h2 {
+  color: #ff7f50;
+  font-family: 'Varela Round', sans-serif;
 }
 
 body {
-  background: url(../images/option-1.png) no-repeat center center fixed;
-  /* background-color: white; */
+  /* background: url(../images/option-1.png) no-repeat center center fixed; */
+  background-color: white;
   text-align: center;
   color: aliceblue;
 }
 
+.aboutImg {
+  width: 300px;
+}
+
+.desc1 {
+color: #133939;
+text-align: right;
+
+}
+
+.desc2 {
+color: #133939;
+text-align: left;
+
+}
+
+.desc3 {
+color: #133939;
+text-align: right;
+
+}
+
 /* sign in and sign up */
+
+.nextToSignIn {
+  align-content: center;
+  font-size: 18px;
+  background-color:#ff7f50;
+  /* border-radius: 10px; */
+  font-family: 'Varela Round', sans-serif;
+}
 
 .sign-in {
   align-content: center;
   font-size: 18px;
-  background-color:#282828;
-  border-radius: 10px;
+  background-color:white;
+  border: solid #ff7f50 1px;
+  /* font-family: 'Varela Round', sans-serif; */
+  color: #133939;
 }
 
 .signBtn {
-background-color: #240090;
-color: aliceblue;
-border-radius: 5px;
+background-color: #133939;
+color: white;
+/* border-radius: 5px; */
+width: 20%;
 border: 1px;
+/* font-family: 'Varela Round', sans-serif; */
 }
 
 .signBtn:hover {
@@ -63,6 +103,10 @@ border: 1px;
 .signBtn1:hover {
   background-color: whitesmoke;
   color: black;
+}
+
+.account {
+  width: 300px;
 }
 
 /* dashboard */
@@ -130,6 +174,7 @@ font-family: 'Righteous', cursive;
   width: 100%;
   height: 2.5rem;
   align-content: center;
+  color: #133939;
 }
 
 /* 404 page */

@@ -1,24 +1,35 @@
 {{!-- sign in page (already have an account) ... can take you to create account page--}}
+
 <div class="header">
-    <a href="dashboard">
+    <br>
+    <a href="/dashboard">
         <img id="logo" src="/images/logo.png" alt="logo">
     </a>
 </div>
+
+<br>
 
 <div class="container">
     <br>
     <div class="row">
         <div>
-            <h2>Welcome to Accountabilibuddy. A safe place to store your hopes and dreams.</h2>
+            <br>
+            <h2>Welcome to Accountabilibuddy. A safe place to track your hopes and dreams.</h2>
+            <br><br>
         </div>
     </div>
     <br>
     <div class="row">
-        <div class="col-lg-4"></div>
+
+        <div class="col-lg-2"></div>
+        <div class="nextToSignIn col-lg-4">
+            <br>
+            <img src="/images/sign-in-3.PNG" alt="sign-in" class="account">
+            <p class="create">don't have an account? <a href="/add" class="text-dark">sign up.</a></p>
+        </div>
+
         <div class="sign-in col-lg-4">
             <br>
-            
-            <p>Sign in to your account.</p>
 
             <form action="api/login" method="POST">
 
@@ -31,14 +42,76 @@
                 <input type="submit" class="signBtn" value="Sign In">
             </form>
             <br>
-            <p>Don't have an account? <a href="/add" class="text-light">Sign up.</a></p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="aboutImg" src="/images/about.PNG" alt="About The App">
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+            <p class="desc1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia
+                deserunt mollit anim id est laborum.</p>
         </div>
         <div class="col-lg-4"></div>
+        <div class="col-lg-2"></div>
     </div>
-    <br> <br>
 
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <p class="desc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+            <p class="desc3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 </div>
-    <div class="footer">
-        <p>© Copyright 2019</p>
-    </div>
+
+<div class="footer">
+    <p>© Copyright 2019</p>
+</div>

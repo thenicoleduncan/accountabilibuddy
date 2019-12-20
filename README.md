@@ -9,3 +9,9 @@
 * HTML, CSS, JavaScript
 * Node.js, Express, mySQL, jawsDB
 
+# Color Pallete:
+* #d2691e
+* #ff7f50
+* #133939
+* #e9d0af
+
