@@ -16,7 +16,7 @@
 
 .header {
   /* border-style: dotted solid double dashed #ff7f50; */
-  background-color: white;
+  background-color: whitesmoke;
   /* border-bottom: 3px double #ff7f50; */
   width: 100%;
 }
@@ -28,35 +28,18 @@
 h2 {
   color: #ff7f50;
   font-family: 'Varela Round', sans-serif;
+  text-align: center !important;
 }
 
 body {
   /* background: url(../images/option-1.png) no-repeat center center fixed; */
-  background-color: white;
+  background-color: whitesmoke;
   text-align: center;
-  color: aliceblue;
+  /* color: aliceblue; */
 }
 
 .aboutImg {
   width: 300px;
-}
-
-.desc1 {
-color: #133939;
-text-align: right;
-
-}
-
-.desc2 {
-color: #133939;
-text-align: left;
-
-}
-
-.desc3 {
-color: #133939;
-text-align: right;
-
 }
 
 /* sign in and sign up */
@@ -107,6 +90,15 @@ border: 1px;
 
 .account {
   width: 300px;
+}
+
+.how-to {
+  width: 80%;
+  align-content: center;
+}
+
+.about-us {
+  align-content: center;
 }
 
 /* dashboard */
