@@ -55,10 +55,14 @@ color: #133939;
 /* sign in and sign up */
 
 .nextToSignIn {
-  align-content: center;
+  text-align: right;
   font-size: 18px;
   background-color:#ff7f50;
-  font-family: 'Varela Round', sans-serif;
+  color: whitesmoke;
+}
+
+.safePlace {
+  color: #133939;
 }
 
 .sign-in {
