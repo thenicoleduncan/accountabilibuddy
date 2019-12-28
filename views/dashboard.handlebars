@@ -1,12 +1,9 @@
 {{!-- dashboard page showing us goals, progress, and priority (upcoming) tasks--}}
-<div class="header">
-  <a href="/dashboard">
-    <img id="logo" src="/images/logo.png" alt="logo">
-  </a>
-</div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
-  <a class="navbar-brand" href="#"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5">
+  <a class="navbar-brand" href="/dashboard">
+    <img class="logoGo" src="/images/logo.png" alt="logo">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,88 +21,94 @@
       </li>
     </ul>
   </div>
+
 </nav>
 
 <div class="container">
+
+  <br><br>
+  <h1 class="text-left mainText">Dashboard</h1>
   <br>
-  <div class="row">
-
-  </div>
-  <br>
 
   <div class="row">
-
-    <div id="priorityTasks" class="priorityTasks col-lg-5">
-      <br>
-      <p class="leading">Priority Tasks</p>
-      <br>
-      <ul>
-        {{#each tasks}}
-        <li>
-          <p class="ptask"><b>Task #{{ id }}:</b> {{ description }}<button type="submit" data-taskid="{{ id }}"
-              class="signBtn1 col-lg-1 p-0 m-0 taskdone">✅</button></p>
-        </li>
-        {{/each}}
-      </ul>
-      <br>
+    <div class="col-lg-12">
+      <p class="leading">Current Goals</p>
+      <hr class="my-4">
     </div>
-
-    <div class="col-lg-2"></div>
-
-    <br>
-
-    <div class="add-goal col-lg-5">
-      <br>
-      <p class="leading">Add a Goal</p>
-      <br>
-      <form action="/api/goal" method="POST">
-        <textarea type="text" name="description" id="textInput" class="textInput"></textarea>
-        <br><br>
-        <button type="submit" class="signBtn">Add Goal!</button>
-      </form>
-      <br>
-    </div>
-
   </div>
-
-  <br>
-  <div class="row">
-
-  </div>
-  <br>
 
   <div class="row">
 
-    <div id="myProgress" class="myProgress col-lg-12">
+    <div class="col-lg-9">
       <br>
-      <p class="leading">Goals</p>
-      <br>
-      <div class="row">
-        <div class="col-lg-12">
-          {{#each goals}}
-          <p id="myBar" class="goalTime col-lg-12">&bull; {{description}}
-            <button type="submit" data-goalid="{{ id }}" class="signBtn1 goaldelete p-0 mr-1 ml-1">❌</button>
-            <button type="submit" data-goalid="{{ id }}" class="signBtn1 goaldone p-0 mr-1 ml-1">✅</button>
-            <button type="submit" class="signBtn1 p-0 mr-1 ml-1"><a class="viewtask"
-                href="/:{{ id }}/tasks">&#128065;</a></button>
-            
-            
+      <div id="myProgress" class="myProgress">
 
-          </p>
+        <div class="row">
+          <div class="col-lg-12">
 
-          {{/each}}
+            {{#each goals}}
+
+            <p id="myBar" class="goalTime col-lg-12">{{description}}
+              <button type="submit" data-goalid="{{ id }}" class="signBtn1 goaldelete p-0 mr-1 ml-1">
+                <img class="goalDelete goaldelete" src="/images/x-delete.PNG" alt="delete">
+              </button>
+
+              <button type="submit" data-goalid="{{ id }}" class="signBtn1 goaldone p-0 mr-1 ml-1">
+                <img class="goalDelete goaldone" src="/images/check-complete.PNG" alt="done">
+              </button>
+
+              <button type="submit" class="signBtn1 p-0 mr-1 ml-1">
+                <a class="viewtask" href="/:{{ id }}/tasks">
+                  <img class="goalDelete" src="/images/eye-view.PNG" alt="view">
+                </a>
+              </button>
+
+            </p>
+            {{/each}}
+
+          </div>
         </div>
       </div>
+      <br><br>
 
+      <div>
+        <p class="leading">Add a Goal</p>
+
+        <form action="/api/goal" method="POST" class="textInput">
+          <textarea type="text" name="description" id="textInput" class="textInput"></textarea>
+          <br><br>
+          <button class="signBtn text-center" type="submit"> Add! </button>
+        </form>
+
+        <hr class="my-4">
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+
+      <div id="priorityTasks" class="priorityTasks">
+        <br>
+        <p class="text-center">Priority Tasks</p>
+        <hr class="my-4">
+        <ul>
+          {{#each tasks}}
+          <li>
+            <p class="ptask">{{ description }}<button type="submit" data-taskid="{{ id }}"
+                class="signBtn1 col-lg-1 p-0 m-0 taskdone"><img class="goalDelete goaldone"
+                  src="/images/check-complete.PNG" alt="done"></button></p>
+          </li>
+          {{/each}}
+        </ul>
+        <br>
+      </div>
     </div>
 
   </div>
 
-  <br>
 </div>
 
+<br><br>
+
 <div class="footer">
-
   <p>© Copyright 2019</p>
-
 </div>
