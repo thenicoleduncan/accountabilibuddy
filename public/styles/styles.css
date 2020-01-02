@@ -6,6 +6,18 @@ body {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+  .safePlace {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+}
+
 .mainText {
 color: #133939;
 font-weight: bold;
@@ -85,7 +97,14 @@ border: 1px;
   border-radius: 5px;
   border: 1px;
   float: right;
+  background-color: whitesmoke !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    background-color: none !important;
   }
+}
 
 .account {
   width: 300px;
@@ -108,6 +127,13 @@ border: 1px;
   font-weight: lighter;
   border-left: solid 1px lightgray;
   color: #133939;
+}
+
+@media only screen and (max-width: 600px) {
+  .priorityTasks {
+    text-align: center;
+    border-left: none;
+  }
 }
 
 .myProgress {
@@ -150,6 +176,7 @@ border: 1px;
   width: 35px;
   align-content: center;
 }
+
 
 .footer {
   width: 100%;

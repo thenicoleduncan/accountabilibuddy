@@ -61,7 +61,7 @@
         <div class="col-lg-12">
 
           {{#each tasksCurrent }}
-          <p id="myBar" class="goalTime col-lg-12">{{description}}
+          <p class="goalTime">{{description}}
             <button type="submit" data-taskid="{{ id }}" class="signBtn1 col-lg-1 p-0 mr-1 ml-1 taskdone"><img
                 class="goalDelete goaldone" src="/images/check-complete.PNG" alt="done"></button>
 
@@ -69,7 +69,7 @@
                 class="goalDelete goaldone" src="/images/priority.PNG" alt="priority"></button>
 
             <button type="submit" data-taskid="{{ id }}" class="signBtn1 col-lg-1 p-0 mr-1 ml-1 taskdelete"><img
-                class="goalDelete goaldelete" src="/images/x-delete.PNG" alt="delete"></button>
+                class="goalDelete goaldone goaldelete" src="/images/x-delete.PNG" alt="delete"></button>
           </p>
 
           {{/each}}
